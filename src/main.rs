@@ -35,7 +35,7 @@ async fn asset(params: web::Query<Params>) -> impl Responder {
         return HttpResponse::Found()
             .insert_header((
                 "Location",
-                format!("https://assetdelivery.roblox.com/v2/assetId/{}", params.id),
+                format!("https://assetdelivery.roblox.com/v1/asset?id={}", params.id),
             ))
             .finish();
     }
